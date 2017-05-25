@@ -91,7 +91,6 @@ RUN \
   tar xf /tmp/kodi.tar.gz -C /tmp/kodi_src --strip-components=1 && \
   cd /tmp/kodi_src && \
   git apply /tmp/kodi-headless.patch && \
-  make -C tools/depends/target/crossguid PREFIX=/usr && \
   ./bootstrap && \
   ./configure \
     --build=$CBUILD \
@@ -116,7 +115,7 @@ RUN \
     --disable-vdpau \
     --disable-libbluray \
     --disable-gtest \
-    --disable-ssh \
+    --enable-ssh \
     --enable-nfs \
     --enable-static=no \
     --enable-upnp \
