@@ -1,8 +1,8 @@
 FROM debian:jessie
 MAINTAINER milaq
 
-ARG KODI_NAME="Krypton"
-ARG KODI_VER="17.1"
+ARG KODI_NAME="Isengard"
+ARG KODI_VER="15.2"
 ENV KODI_WORKDIR=/opt/kodi-headless
 
 ARG BUILD_DATE
