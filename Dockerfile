@@ -1,5 +1,5 @@
-FROM debian:jessie
-MAINTAINER milaq
+FROM ubuntu:16.04
+MAINTAINER fetzerms
 
 ARG KODI_NAME="Isengard"
 ARG KODI_VER="15.2"
@@ -94,7 +94,7 @@ RUN \
   ./bootstrap && \
   ./configure \
     --build=$CBUILD \
-    --disable-airplay \
+    --enable-airplay \
     --disable-airtunes \
     --disable-alsa \
     --disable-avahi \
